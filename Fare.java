@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 import java.util.Scanner.*;
-class Fare {
+class Main {
   public static void main(String[] args) {
     System.out.println("Hello world!");
     
@@ -24,22 +24,32 @@ class Fare {
 }
   class findFare{
   void Mini(int distance){
-    if(distance<=75){
+    if(distance<=75 && distance>=3){
+      
       int r_fare = distance -3;
+      
       int t_fare = 50 +(r_fare * 10);
       System.out.println(t_fare);
     }
+    else if(distance<4){
+        int t_fare =50;
+        System.out.println(t_fare);
+      }
     else{
       int t_fare = distance*8;
       System.out.println(t_fare);
     }
   }
  void sedan(int distance){ 
-   if(distance<=100){
+   if(distance<=100 && distance>=5){
       int r_fare = distance -5;
       int t_fare = 80 +(r_fare * 12);
       System.out.println(t_fare);
     }
+    else if(distance<6){
+        int t_fare =80;
+        System.out.println(t_fare);
+      }
     else{
       int t_fare = distance*10;
       System.out.println(t_fare);
@@ -47,10 +57,14 @@ class Fare {
  }
 
  void suv(int distance){
-   if(distance<=100){
+   if(distance<=100 && distance>=5){
       int r_fare = distance -5;
       int t_fare = 100 +(r_fare * 15);
       System.out.println(t_fare);
     }
+    else{
+        int t_fare =100;
+        System.out.println(t_fare);
+      }
  }
 }
